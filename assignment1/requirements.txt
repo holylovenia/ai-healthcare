@@ -1,0 +1,10 @@
+h5py
+numpy
+pandas
+torch
+torchio
+torchmetrics
+torchvision
+tqdm
+git+https://github.com/deepmind/surface-distance.git@master
+git+https://github.com/wolny/pytorch-3dunet.git@master
