@@ -130,3 +130,5 @@ dmypy.json
 
 # Local stuff
 **/data
+**/save
+**/wandb
