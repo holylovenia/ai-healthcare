@@ -490,7 +490,7 @@ class TemporalLSTM(nn.Module):
         self.num_labels = num_labels
         
         self.lstm = nn.LSTM(
-            self.input_size, self.hidden_size, self.num_layers, batch_first=True, dropout=1)
+            self.input_size, self.hidden_size, self.num_layers, bidirectional=self.bidirectional, batch_first=True, dropout=1)
         nn.init.xavier_normal_(self.lstm.all_weights[0][0])
         nn.init.xavier_normal_(self.lstm.all_weights[0][1])
         self.classifier = nn.Linear(self.hidden_size * (2 if self.bidirectional else 1), self.num_labels)
@@ -534,7 +534,7 @@ def temporal_training(
         remove_unused_columns=False,
         evaluation_strategy = "epoch",
         save_strategy = "epoch",
-        learning_rate=3e-6, # 5e-4 got 74.23%
+        learning_rate=5e-6, # 5e-4 got 74.23%
         per_device_train_batch_size=8,
         gradient_accumulation_steps=4,
         per_device_eval_batch_size=8,
@@ -574,7 +574,7 @@ def temporal_training(
 # In[26]:
 
 
-exp3_temporal_lstm = TemporalLSTM()
+exp3_temporal_lstm = TemporalLSTM(bidirectional=True)
 
 
 # In[27]:
@@ -588,7 +588,7 @@ exp3_temporal_network = TemporalNetwork(exp3_img_enc, exp3_temporal_lstm)
 
 temporal_trainer = temporal_training(
     exp3_temporal_network,
-    output_dir=f"save/problem3/temp/{model_name_or_path}__3e-6",
+    output_dir=f"save/problem3/temp/{model_name_or_path}__5e-6__bidir",
     train_dataset=proc_datasets["train"],
     eval_dataset=proc_datasets["valid"],
     trainer_class=TemporalTrainer)
