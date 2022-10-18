@@ -18,11 +18,11 @@ ELEC6910X Advanced Topics in AI and Healthcare
 
 - [Assignment 1 Description](.docs/Assignment1.pdf)
 
-- [x] [Solution for Problem 1: 3D Segmentation](./problem1-solution.ipynb)
+- [x] Solution for Problem 1: 3D Segmentation [`[Notebook]`](./problem1-solution.ipynb) [`[Report]`](./docs/problem1-solution.pdf)
 
-- [x] [Solution for Problem 2: Skin Lesion Classification](./problem2-solution.ipynb)
+- [x] Solution for Problem 2: Skin Lesion Classification [`[Notebook]`](./problem2-solution.ipynb) [`[Report]`](./docs/problem2-solution.pdf)
 
-- [x] [Solution for Problem 3: Surgical Phase Recognition](./problem3-solution.ipynb)
+- [x] Solution for Problem 3: Surgical Phase Recognition [`[Notebook]`](./problem3-solution.ipynb) [`[Report]`](./docs/problem3-solution.pdf)
 
 > :sparkles: Tips: There is a summary of what's done in each solution (i.e., a Conclusion section) at the end of the report.
 
