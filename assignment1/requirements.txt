@@ -1,10 +1,16 @@
+datasets
 h5py
+matplotlib
+monai
+monai-weekly[ignite, nibabel, tensorboard]
+nibabel
 numpy
 pandas
+pytorch-ignite
+pytorch-metric-learning
+scikit-learn
 torch
 torchio
-torchmetrics
 torchvision
+transformers
 tqdm
-git+https://github.com/deepmind/surface-distance.git@master
-git+https://github.com/wolny/pytorch-3dunet.git@master
